@@ -207,12 +207,12 @@
               <img src="images/menu-tiffins.svg" alt="Tiffins Rate Board - Sree Swathi Tiffins" loading="lazy">
               <button class="board-zoom-overlay view-photo-btn" data-img="images/menu-tiffins.svg" data-title="Tiffins & Combos Rate Board">
                 <i class="fa-solid fa-magnifying-glass-plus"></i>
-                <span>Enlarge Tiffins Board</span>
+                <span>Enlarge Board</span>
               </button>
             </div>
             <div class="board-caption">
               <h4>Tiffins & Combos Rates</h4>
-              <p>Idly (₹40), Sambar Idly (₹50), Vada (₹65), Mysore Bajji (₹50), Poori (₹65)...</p>
+              <p>Idly (₹30), Sambar Idly (₹40), Vada (₹50), Mysore Bajji (₹40), Poori (₹50)...</p>
             </div>
           </div>
 
@@ -222,12 +222,12 @@
               <img src="images/menu-dosas.svg" alt="Dosas Rate Board - Sree Swathi Tiffins" loading="lazy">
               <button class="board-zoom-overlay view-photo-btn" data-img="images/menu-dosas.svg" data-title="Dosas & Pesarattu Rate Board">
                 <i class="fa-solid fa-magnifying-glass-plus"></i>
-                <span>Enlarge Dosas Board</span>
+                <span>Enlarge Board</span>
               </button>
             </div>
             <div class="board-caption">
               <h4>Special Dosas & Pesarattu</h4>
-              <p>Plain (₹50), Masala (₹65), Ghee Karam (₹100), 70 MM Dosa (₹130), Upma Pesarattu (₹80)...</p>
+              <p>Plain (₹40), Masala (₹50), Ghee Karam (₹80), 70 MM Dosa (₹100), Upma Pesarattu (₹70)...</p>
             </div>
           </div>
 
@@ -237,12 +237,12 @@
               <img src="images/menu-rice-meals.svg" alt="Rice & Meals Rate Board - Sree Swathi Tiffins" loading="lazy">
               <button class="board-zoom-overlay view-photo-btn" data-img="images/menu-rice-meals.svg" data-title="Rice, Meals & Sweets Board">
                 <i class="fa-solid fa-magnifying-glass-plus"></i>
-                <span>Enlarge Rice & Meals Board</span>
+                <span>Enlarge Board</span>
               </button>
             </div>
             <div class="board-caption">
               <h4>Rice, Meals & Sweets</h4>
-              <p>Veg Biryani (₹75), Plate Meals (₹100), Full Meals Parcel (₹130), Double Ka Meetha (₹40)...</p>
+              <p>Veg Biryani (₹65), Plate Meals (₹90), Full Meals Parcel (₹120), Double Ka Meetha (₹30)...</p>
             </div>
           </div>
 
@@ -252,12 +252,12 @@
               <img src="images/menu-tea-coffee.svg" alt="Tea, Coffee & Drink Mixes Rate Board" loading="lazy">
               <button class="board-zoom-overlay view-photo-btn" data-img="images/menu-tea-coffee.svg" data-title="Tea, Coffee & Beverage Board">
                 <i class="fa-solid fa-magnifying-glass-plus"></i>
-                <span>Enlarge Beverages Board</span>
+                <span>Enlarge Board</span>
               </button>
             </div>
             <div class="board-caption">
-              <h4>Tea, Coffee & Herbal Drinks</h4>
-              <p>Filter Coffee (₹20), Masala Tea (₹20), Hot Badam Milk (₹20), Ragi Malt (₹20), Osmania Biscuit (₹3)...</p>
+              <h4>Tea, Coffee & Drinks</h4>
+              <p>Filter Coffee (₹20), Single Tea (₹10), Hot Badam Milk (₹20), Ragi Malt (₹20)...</p>
             </div>
           </div>
         </div>
@@ -271,7 +271,7 @@
           <div>
             <span class="section-tag">COMPLETE RATE LIST</span>
             <h2 class="section-heading">Official Menu & Prices</h2>
-            <p class="section-subheading">All 90 items indexed with official board item numbers and prices in Indian Rupees (₹).</p>
+            <p class="section-subheading">All 90 items indexed with official board item numbers and original rates (₹).</p>
           </div>
 
           <!-- Search & Filter Controls -->
@@ -316,6 +316,14 @@
           <!-- Dynamically populated from REAL_MENU_DATA -->
         </div>
 
+        <!-- Expand / Collapse All Menu Items Action -->
+        <div class="expand-action-wrap text-center" id="menuExpandWrap" style="display: none;">
+          <button class="btn btn-outline expand-toggle-btn" id="toggleMenuBtn" aria-expanded="false">
+            <i class="fa-solid fa-chevron-down" id="toggleMenuIcon"></i>
+            <span id="toggleMenuText">Show All 90 Items</span>
+          </button>
+        </div>
+
         <!-- Empty State -->
         <div class="empty-search-state" id="emptyMenuState" style="display: none;">
           <i class="fa-solid fa-utensils empty-icon"></i>
@@ -358,7 +366,7 @@
 
         <!-- Review Filter Chips (From Google Maps) -->
         <div class="review-filter-chips-wrap">
-          <span class="filter-label"><i class="fa-solid fa-tags"></i> Popular Mentions:</span>
+          <span class="filter-label"><i class="fa-solid fa-tags"></i> Mentions:</span>
           <button class="rev-filter-chip active" data-tag="all">All</button>
           <button class="rev-filter-chip" data-tag="tiffins">Tiffins (37)</button>
           <button class="rev-filter-chip" data-tag="poori">Poori (23)</button>
@@ -375,6 +383,14 @@
           <!-- Dynamically populated from REAL_GOOGLE_REVIEWS -->
         </div>
 
+        <!-- Expand / Collapse Reviews Action -->
+        <div class="expand-action-wrap text-center" id="reviewsExpandWrap" style="display: none;">
+          <button class="btn btn-outline expand-toggle-btn" id="toggleReviewsBtn" aria-expanded="false">
+            <i class="fa-solid fa-chevron-down" id="toggleReviewsIcon"></i>
+            <span id="toggleReviewsText">Show All Reviews (5,384+ on Maps)</span>
+          </button>
+        </div>
+
         <!-- Google Maps Review CTA -->
         <div class="google-review-cta-box text-center">
           <p>Visited Sree Swathi Tiffins recently? Share your experience on Google Maps!</p>
@@ -388,56 +404,45 @@
     <!-- About & Heritage Section -->
     <section class="about-section" id="about">
       <div class="container">
-        <div class="about-grid">
-          <div class="about-text-content">
-            <span class="section-tag">OUR STORY & HERITAGE</span>
-            <h2 class="section-heading">A 25+ Year Morning Landmark in Habsiguda</h2>
-            <p>
-              Located prominently on <strong>Street Number 8 Main Road</strong>, <strong>Sree Swathi Tiffins (Veg)</strong> has been the go-to breakfast and meal spot for generations of students, office goers, travellers, and local families.
-            </p>
-            <p>
-              Operating on a fast, efficient <strong>Self-Service (Darshini style)</strong> token counter model, we serve fresh tiffins right off the hot tawas from 6:00 AM in the morning to 11:00 PM at night.
-            </p>
-            <div class="about-key-points">
-              <div class="about-point">
-                <i class="fa-solid fa-circle-check text-green"></i>
-                <div>
-                  <strong>Recently Renovated</strong>
-                  <p>Cleaner dining space, modernized wash areas, and hygienic food prep.</p>
-                </div>
-              </div>
-              <div class="about-point">
-                <i class="fa-solid fa-circle-check text-green"></i>
-                <div>
-                  <strong>Extensive Variety</strong>
-                  <p>Over 90+ items spanning Dosas, Idlis, Pooris, Meals, Chai & Herbal drinks.</p>
-                </div>
-              </div>
-              <div class="about-point">
-                <i class="fa-solid fa-circle-check text-green"></i>
-                <div>
-                  <strong>Affordable Everyday Prices</strong>
-                  <p>Delicious food at honest prices, making quality tiffins accessible to all.</p>
-                </div>
-              </div>
+        <div class="about-bento-card">
+          <div class="about-bento-header">
+            <div>
+              <span class="section-tag">OUR STORY & HERITAGE</span>
+              <h2 class="section-heading">25+ Year Morning Landmark in Habsiguda</h2>
+              <p class="about-intro-text">
+                Located on <strong>Street No. 8 Main Road</strong>, Sree Swathi Tiffins (Veg) is Habsiguda's favorite self-service vegetarian eatery, serving piping hot tiffins, dosas, meals, and filter coffee from <strong>6:00 AM to 11:00 PM</strong> daily.
+              </p>
             </div>
           </div>
 
-          <div class="about-visual-card">
-            <div class="info-card-box">
-              <h3><i class="fa-solid fa-store text-gold"></i> Quick Store Info</h3>
-              <ul class="store-quick-details">
-                <li><strong>Official Name:</strong> Sree Swathi Tiffins (Veg)</li>
-                <li><strong>Owner Phone:</strong> <a href="tel:07995008827" class="text-gold"><strong>07995008827</strong></a></li>
-                <li><strong>GST Registration:</strong> 36EKHPK9217G1ZX</li>
-                <li><strong>Locality:</strong> St. No. 8, Habsiguda, Hyderabad</li>
-                <li><strong>Daily Timings:</strong> 6:00 AM to 11:00 PM</li>
-                <li><strong>Dining Style:</strong> Self Service & Takeaway Parcel</li>
-                <li><strong>Cuisine:</strong> 100% Pure Vegetarian South Indian & Udupi Style</li>
-              </ul>
-              <a href="https://maps.app.goo.gl/qcgKFp7eH39BFdNw5" target="_blank" rel="noopener noreferrer" class="btn btn-outline full-width" style="margin-top: 1rem;">
-                <i class="fa-solid fa-map-location-dot"></i> View on Google Maps
-              </a>
+          <div class="about-highlights-grid">
+            <div class="about-highlight-item">
+              <i class="fa-solid fa-leaf text-green"></i>
+              <div>
+                <strong>100% Pure Vegetarian</strong>
+                <p>Clean Udupi & Telangana style tiffins & meals.</p>
+              </div>
+            </div>
+            <div class="about-highlight-item">
+              <i class="fa-solid fa-bolt text-gold"></i>
+              <div>
+                <strong>Fast Self-Service</strong>
+                <p>Quick token counter with dining & parcel service.</p>
+              </div>
+            </div>
+            <div class="about-highlight-item">
+              <i class="fa-solid fa-clock text-blue"></i>
+              <div>
+                <strong>6:00 AM – 11:00 PM</strong>
+                <p>Open all 7 days with continuous hot service.</p>
+              </div>
+            </div>
+            <div class="about-highlight-item">
+              <i class="fa-solid fa-phone text-coral"></i>
+              <div>
+                <strong>Owner Contact</strong>
+                <p><a href="tel:07995008827" class="text-gold">07995008827</a> • GST: 36EKHPK9217G1ZX</p>
+              </div>
             </div>
           </div>
         </div>

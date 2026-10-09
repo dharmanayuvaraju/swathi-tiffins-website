@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentCategory = 'all';
   let searchQuery = '';
   let activeReviewTag = 'all';
+  let isMenuExpanded = false;
+  let isReviewsExpanded = false;
+  const INITIAL_MENU_ITEMS_LIMIT = 8;
+  const INITIAL_REVIEWS_LIMIT = 3;
 
   // DOM Elements
   const menuGridContainer = document.getElementById('menuGridContainer');
@@ -16,9 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const categoryTabs = document.querySelectorAll('.cat-tab');
   const countAll = document.getElementById('countAll');
 
+  // Menu Expand Elements
+  const menuExpandWrap = document.getElementById('menuExpandWrap');
+  const toggleMenuBtn = document.getElementById('toggleMenuBtn');
+  const toggleMenuIcon = document.getElementById('toggleMenuIcon');
+  const toggleMenuText = document.getElementById('toggleMenuText');
+
   // Reviews Elements
   const reviewsContainer = document.getElementById('reviewsContainer');
   const revFilterChips = document.querySelectorAll('.rev-filter-chip');
+  const reviewsExpandWrap = document.getElementById('reviewsExpandWrap');
+  const toggleReviewsBtn = document.getElementById('toggleReviewsBtn');
+  const toggleReviewsIcon = document.getElementById('toggleReviewsIcon');
+  const toggleReviewsText = document.getElementById('toggleReviewsText');
 
   // Photo Viewer Dialog
   const photoViewerDialog = document.getElementById('photoViewerDialog');
@@ -115,16 +129,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderMenu() {
-    const items = getFilteredMenu();
+    const allMatchingItems = getFilteredMenu();
 
-    if (items.length === 0) {
+    if (allMatchingItems.length === 0) {
       menuGridContainer.innerHTML = '';
       emptyMenuState.style.display = 'block';
+      if (menuExpandWrap) menuExpandWrap.style.display = 'none';
       return;
     }
 
     emptyMenuState.style.display = 'none';
-    menuGridContainer.innerHTML = items.map(item => {
+
+    const isSearching = searchQuery.trim() !== '';
+    let itemsToDisplay = allMatchingItems;
+
+    if (!isSearching && !isMenuExpanded && allMatchingItems.length > INITIAL_MENU_ITEMS_LIMIT) {
+      itemsToDisplay = allMatchingItems.slice(0, INITIAL_MENU_ITEMS_LIMIT);
+      if (menuExpandWrap) {
+        menuExpandWrap.style.display = 'block';
+        toggleMenuIcon.className = 'fa-solid fa-chevron-down';
+        toggleMenuText.textContent = `Show All ${allMatchingItems.length} Items`;
+        toggleMenuBtn.setAttribute('aria-expanded', 'false');
+      }
+    } else if (!isSearching && isMenuExpanded && allMatchingItems.length > INITIAL_MENU_ITEMS_LIMIT) {
+      if (menuExpandWrap) {
+        menuExpandWrap.style.display = 'block';
+        toggleMenuIcon.className = 'fa-solid fa-chevron-up';
+        toggleMenuText.textContent = 'Show Less (Top 8 Items)';
+        toggleMenuBtn.setAttribute('aria-expanded', 'true');
+      }
+    } else {
+      if (menuExpandWrap) menuExpandWrap.style.display = 'none';
+    }
+
+    menuGridContainer.innerHTML = itemsToDisplay.map(item => {
       return `
         <article class="real-menu-card">
           <div class="menu-card-header-row">
@@ -143,6 +181,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join('');
   }
 
+  if (toggleMenuBtn) {
+    toggleMenuBtn.addEventListener('click', () => {
+      isMenuExpanded = !isMenuExpanded;
+      renderMenu();
+      if (!isMenuExpanded) {
+        const menuSection = document.getElementById('menu');
+        if (menuSection) menuSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
   // Category filter click
   categoryTabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -153,6 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tab.classList.add('active');
       tab.setAttribute('aria-selected', 'true');
       currentCategory = tab.dataset.category;
+      isMenuExpanded = false; // Reset to clean compact view on tab change
       renderMenu();
     });
   });
@@ -176,20 +226,42 @@ document.addEventListener('DOMContentLoaded', () => {
     searchQuery = '';
     menuSearchInput.value = '';
     clearSearchBtn.style.display = 'none';
+    isMenuExpanded = false;
     categoryTabs.forEach(t => t.classList.toggle('active', t.dataset.category === 'all'));
     renderMenu();
   });
 
   // =========================================================================
-  // Render Real Google Reviews
+  // Render Real Google Reviews (Limited to 3 initially with Show All toggle)
   // =========================================================================
   function renderReviews() {
-    let reviews = REAL_GOOGLE_REVIEWS;
+    let allReviews = REAL_GOOGLE_REVIEWS;
     if (activeReviewTag !== 'all') {
-      reviews = reviews.filter(r => r.tag === activeReviewTag);
+      allReviews = allReviews.filter(r => r.tag === activeReviewTag);
     }
 
-    reviewsContainer.innerHTML = reviews.map(rev => {
+    let reviewsToDisplay = allReviews;
+
+    if (!isReviewsExpanded && allReviews.length > INITIAL_REVIEWS_LIMIT) {
+      reviewsToDisplay = allReviews.slice(0, INITIAL_REVIEWS_LIMIT);
+      if (reviewsExpandWrap) {
+        reviewsExpandWrap.style.display = 'block';
+        toggleReviewsIcon.className = 'fa-solid fa-chevron-down';
+        toggleReviewsText.textContent = `Show All ${allReviews.length} Reviews (5,384+ on Maps)`;
+        toggleReviewsBtn.setAttribute('aria-expanded', 'false');
+      }
+    } else if (isReviewsExpanded && allReviews.length > INITIAL_REVIEWS_LIMIT) {
+      if (reviewsExpandWrap) {
+        reviewsExpandWrap.style.display = 'block';
+        toggleReviewsIcon.className = 'fa-solid fa-chevron-up';
+        toggleReviewsText.textContent = 'Show Less (Top 3 Reviews)';
+        toggleReviewsBtn.setAttribute('aria-expanded', 'true');
+      }
+    } else {
+      if (reviewsExpandWrap) reviewsExpandWrap.style.display = 'none';
+    }
+
+    reviewsContainer.innerHTML = reviewsToDisplay.map(rev => {
       const initials = rev.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase() || 'ST';
       const starsHtml = Array.from({ length: 5 }, (_, i) => `<i class="fa-solid fa-star${i < rev.rating ? '' : '-half-stroke'}"></i>`).join('');
 
@@ -216,11 +288,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join('');
   }
 
+  if (toggleReviewsBtn) {
+    toggleReviewsBtn.addEventListener('click', () => {
+      isReviewsExpanded = !isReviewsExpanded;
+      renderReviews();
+      if (!isReviewsExpanded) {
+        const revSection = document.getElementById('reviews');
+        if (revSection) revSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
   revFilterChips.forEach(chip => {
     chip.addEventListener('click', () => {
       revFilterChips.forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
       activeReviewTag = chip.dataset.tag;
+      isReviewsExpanded = false; // Reset to top 3 on filter tag switch
       renderReviews();
     });
   });

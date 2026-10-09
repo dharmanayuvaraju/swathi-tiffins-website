@@ -759,10 +759,16 @@ button {
   color: var(--text-muted);
 }
 
-/* Hero Showcase Rate Board (Responsive) */
+/* Hero Showcase Rate Board (Desktop only to prevent mobile vertical duplication) */
 .hero-showcase {
-  display: flex;
-  justify-content: center;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .hero-showcase {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .hero-board-preview-card {
@@ -821,25 +827,31 @@ button {
 }
 
 /* ==========================================================================
-   Rate Boards Gallery Section (Touch Friendly)
+   Rate Boards Gallery Section (Compact & Touch Friendly)
    ========================================================================== */
 .rate-boards-section {
-  padding: 3.5rem 0;
+  padding: 2.25rem 0;
   background-color: #100e0c;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.boards-gallery-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  margin-top: 2rem;
+@media (min-width: 768px) {
+  .rate-boards-section {
+    padding: 3.5rem 0;
+  }
 }
 
-@media (min-width: 600px) {
+.boards-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
   .boards-gallery-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
   }
 }
 
@@ -853,12 +865,18 @@ button {
 
 .board-img-wrap {
   position: relative;
-  height: 220px;
+  height: 130px;
   background-color: #ffd200;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .board-img-wrap {
+    height: 180px;
+  }
 }
 
 .board-img-wrap img {
@@ -867,45 +885,66 @@ button {
   object-fit: contain;
 }
 
-.board-touch-btn-mobile {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(12, 11, 10, 0.85);
-  backdrop-filter: blur(8px);
-  color: var(--accent-gold);
-  border: 1px solid var(--border-glass);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
 .board-caption {
-  padding: 1rem;
+  padding: 0.65rem 0.75rem;
 }
 
 .board-caption h4 {
-  font-size: 1rem;
+  font-size: 0.825rem;
   font-weight: 800;
   color: #fff;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.15rem;
 }
 
 .board-caption p {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Expand / Collapse Actions (Show More Buttons) */
+.expand-action-wrap {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.expand-toggle-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass-hover);
+  color: var(--text-pure);
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.88rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.expand-toggle-btn:hover, .expand-toggle-btn:active {
+  background: rgba(255, 183, 3, 0.15);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  box-shadow: 0 6px 20px rgba(255, 183, 3, 0.25);
 }
 
 /* ==========================================================================
    Complete Digital Menu Section (Mobile List / Bento)
    ========================================================================== */
 .menu-section {
-  padding: 3.5rem 0;
+  padding: 2.25rem 0;
+}
+
+@media (min-width: 768px) {
+  .menu-section {
+    padding: 3.5rem 0;
+  }
 }
 
 .menu-header-flex {
@@ -1332,95 +1371,84 @@ button {
 }
 
 /* ==========================================================================
-   About & Store Info (Mobile Bento)
+   About & Store Info (Streamlined Bento Card)
    ========================================================================== */
 .about-section {
-  padding: 3.5rem 0;
+  padding: 2.25rem 0;
   background-color: var(--bg-dark);
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-@media (min-width: 992px) {
-  .about-grid {
-    grid-template-columns: 1.2fr 0.8fr;
+@media (min-width: 768px) {
+  .about-section {
+    padding: 3.5rem 0;
   }
 }
 
-.about-text-content p {
+.about-bento-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-glass);
+  padding: 1.5rem 1.25rem;
+  box-shadow: var(--shadow-bento);
+}
+
+@media (min-width: 768px) {
+  .about-bento-card {
+    padding: 2rem 2.25rem;
+  }
+}
+
+.about-intro-text {
   font-size: 0.92rem;
   color: var(--text-muted);
-  margin-bottom: 0.85rem;
   line-height: 1.6;
+  margin-top: 0.4rem;
 }
 
-.about-key-points {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+.about-highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
   margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.about-point {
+@media (min-width: 600px) {
+  .about-highlights-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+.about-highlight-item {
   display: flex;
-  gap: 0.65rem;
+  align-items: flex-start;
+  gap: 0.75rem;
   background: rgba(255, 255, 255, 0.02);
   padding: 0.75rem;
   border-radius: var(--radius-sm);
   border: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-.about-point i {
-  font-size: 1.1rem;
-  color: var(--accent-neon-green);
+.about-highlight-item i {
+  font-size: 1.15rem;
   margin-top: 0.15rem;
+  flex-shrink: 0;
 }
 
-.about-point strong {
+.about-highlight-item strong {
   display: block;
   font-size: 0.9rem;
   color: #fff;
+  margin-bottom: 0.15rem;
 }
 
-.about-point p {
-  font-size: 0.82rem;
-  margin-bottom: 0;
-}
-
-.info-card-box {
-  background: var(--bg-card);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
-  padding: 1.5rem 1.15rem;
-  width: 100%;
-}
-
-.info-card-box h3 {
-  font-size: 1.15rem;
-  color: #fff;
-  margin-bottom: 1rem;
-  padding-bottom: 0.6rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.store-quick-details {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.store-quick-details li {
-  font-size: 0.88rem;
+.about-highlight-item p {
+  font-size: 0.78rem;
   color: var(--text-muted);
-}
-
-.store-quick-details strong {
-  color: #fff;
+  line-height: 1.35;
+  margin-bottom: 0;
 }
 
 /* ==========================================================================
