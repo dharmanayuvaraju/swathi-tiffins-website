@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" width="800" height="1200" style="background:#ffd200; font-family:'Arial Black', 'Helvetica Neue', sans-serif;">
+  <defs>
+    <filter id="shadowR" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <linearGradient id="headerGradR" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff0000"/>
+      <stop offset="100%" stop-color="#b30000"/>
+    </linearGradient>
+    <linearGradient id="subHeaderGradR" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00227b"/>
+      <stop offset="100%" stop-color="#001040"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Board Frame -->
+  <rect x="15" y="15" width="770" height="1170" rx="12" fill="#ffd200" stroke="#000" stroke-width="8"/>
+  <rect x="25" y="25" width="750" height="1150" fill="none" stroke="#d61b1b" stroke-width="3"/>
+
+  <!-- Main Restaurant Name Header -->
+  <rect x="35" y="35" width="730" height="85" rx="8" fill="url(#headerGradR)" stroke="#000" stroke-width="3"/>
+  <text x="400" y="85" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle" filter="url(#shadowR)" letter-spacing="2">SRI SWATHI TIFFINS</text>
+  <text x="400" y="112" font-size="20" font-weight="900" fill="#ffd200" text-anchor="middle" letter-spacing="3">( 100% PURE VEG )</text>
+
+  <!-- Address, Phone & GST Header -->
+  <rect x="35" y="130" width="730" height="70" rx="6" fill="url(#subHeaderGradR)"/>
+  <text x="400" y="158" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="1">ST. NO. 8, HABSIGUDA, HYDERABAD</text>
+  <text x="400" y="186" font-size="18" font-weight="bold" fill="#ffd200" text-anchor="middle">GST: 36EKHPK9217G1ZX  |  PH: 07995008827</text>
+
+  <!-- Section 1: RICE (Exact Original Prices from Image 3) -->
+  <rect x="180" y="215" width="440" height="46" rx="23" fill="#006837" stroke="#000" stroke-width="2"/>
+  <text x="400" y="247" font-size="26" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="3">RICE</text>
+
+  <g font-size="23" font-weight="900" fill="#00227b" font-family="'Arial Black', sans-serif">
+    <!-- Item 45: Tomato Rice 50/- -->
+    <text x="55" y="295">45. TOMATO RICE</text>
+    <text x="410" y="295" fill="#444" font-weight="bold" letter-spacing="3">................</text>
+    <text x="680" y="295" fill="#d61b1b" font-size="26">50/-</text>
+
+    <!-- Item 46: Lemon Rice 50/- -->
+    <text x="55" y="340">46. LEMON RICE</text>
+    <text x="390" y="340" fill="#444" font-weight="bold" letter-spacing="3">..................</text>
+    <text x="680" y="340" fill="#d61b1b" font-size="26">50/-</text>
+
+    <!-- Item 47: Curd Rice 50/- -->
+    <text x="55" y="385">47. CURD RICE</text>
+    <text x="375" y="385" fill="#444" font-weight="bold" letter-spacing="3">....................</text>
+    <text x="680" y="385" fill="#d61b1b" font-size="26">50/-</text>
+
+    <!-- Item 48: Veg Biryani 65/- -->
+    <rect x="45" y="405" width="710" height="42" fill="#ffedd5" rx="6"/>
+    <text x="55" y="435" fill="#d61b1b">48. VEG. BIRYANI</text>
+    <text x="420" y="435" fill="#d61b1b" font-weight="bold" letter-spacing="3">...............</text>
+    <text x="680" y="435" fill="#d61b1b" font-size="26">65/-</text>
+
+    <!-- Item 49: Rice Pongal 55/- -->
+    <text x="55" y="480">49. RICE PONGAL</text>
+    <text x="410" y="480" fill="#444" font-weight="bold" letter-spacing="3">................</text>
+    <text x="680" y="480" fill="#d61b1b" font-size="26">55/-</text>
+  </g>
+
+  <!-- Section 2: MEALS (Exact Original Prices from Image 3) -->
+  <rect x="180" y="525" width="440" height="46" rx="23" fill="#d61b1b" stroke="#000" stroke-width="2"/>
+  <text x="400" y="557" font-size="26" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="3">MEALS</text>
+
+  <g font-size="23" font-weight="900" fill="#00227b" font-family="'Arial Black', sans-serif">
+    <!-- Item 50: Plate Meals 90/- -->
+    <text x="55" y="615">50. PLATE MEALS</text>
+    <text x="400" y="615" fill="#444" font-weight="bold" letter-spacing="3">..................</text>
+    <text x="680" y="615" fill="#d61b1b" font-size="26">90/-</text>
+
+    <!-- Item 51: Plate Meals Parcel 95/- -->
+    <text x="55" y="665">51. PLATE MEALS PARCEL</text>
+    <text x="490" y="665" fill="#444" font-weight="bold" letter-spacing="3">.......</text>
+    <text x="680" y="665" fill="#d61b1b" font-size="26">95/-</text>
+
+    <!-- Item 52: Full Meals Parcel 120/- -->
+    <rect x="45" y="685" width="710" height="42" fill="#ffedd5" rx="6"/>
+    <text x="55" y="715" fill="#d61b1b">52. FULL MEALS PARCEL</text>
+    <text x="480" y="715" fill="#d61b1b" font-weight="bold" letter-spacing="3">........</text>
+    <text x="670" y="715" fill="#d61b1b" font-size="26">120/-</text>
+
+    <!-- Item 53: Extra Rice 35/- -->
+    <text x="55" y="765">53. EXTRA RICE</text>
+    <text x="375" y="765" fill="#444" font-weight="bold" letter-spacing="3">....................</text>
+    <text x="680" y="765" fill="#d61b1b" font-size="26">35/-</text>
+
+    <!-- Item 54: Dal, Sambar, Curry 30/- -->
+    <text x="55" y="815">54. DAL, SAMBAR, CURRY (EACH)</text>
+    <text x="580" y="815" fill="#444" font-weight="bold" letter-spacing="3">..</text>
+    <text x="680" y="815" fill="#d61b1b" font-size="26">30/-</text>
+  </g>
+
+  <!-- Section 3: SWEETS -->
+  <rect x="180" y="865" width="440" height="46" rx="23" fill="#00227b" stroke="#000" stroke-width="2"/>
+  <text x="400" y="897" font-size="26" font-weight="900" fill="#ffd200" text-anchor="middle" letter-spacing="3">SWEETS</text>
+
+  <g font-size="23" font-weight="900" fill="#00227b" font-family="'Arial Black', sans-serif">
+    <!-- Item 57: Double Ka Meeta 30/- -->
+    <rect x="45" y="930" width="710" height="50" fill="#fff" stroke="#d61b1b" stroke-width="2" rx="8"/>
+    <text x="55" y="963" fill="#b45309">57. DOUBLE KA MEETA</text>
+    <text x="490" y="963" fill="#444" font-weight="bold" letter-spacing="3">.......</text>
+    <text x="680" y="963" fill="#d61b1b" font-size="28">30/-</text>
+  </g>
+
+  <!-- Footer Banner on board -->
+  <rect x="35" y="1025" width="730" height="120" rx="8" fill="#1e1b18"/>
+  <text x="400" y="1065" font-size="22" font-weight="900" fill="#ffd200" text-anchor="middle" letter-spacing="1">SELF SERVICE &amp; FAST PARCEL COUNTER</text>
+  <text x="400" y="1100" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">HOT MEALS SERVED DAILY FROM 11:30 AM ONWARDS</text>
+  <text x="400" y="1130" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">STREET NO. 8, HABSIGUDA • PH: 07995008827</text>
+</svg>

@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" width="800" height="1200" style="background:#ffd200; font-family:'Arial Black', 'Helvetica Neue', sans-serif;">
+  <defs>
+    <filter id="shadowD" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <linearGradient id="headerGradD" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff0000"/>
+      <stop offset="100%" stop-color="#b30000"/>
+    </linearGradient>
+    <linearGradient id="subHeaderGradD" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00227b"/>
+      <stop offset="100%" stop-color="#001040"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Board Frame -->
+  <rect x="15" y="15" width="770" height="1170" rx="12" fill="#ffd200" stroke="#000" stroke-width="8"/>
+  <rect x="25" y="25" width="750" height="1150" fill="none" stroke="#d61b1b" stroke-width="3"/>
+
+  <!-- Main Restaurant Name Header -->
+  <rect x="35" y="35" width="730" height="85" rx="8" fill="url(#headerGradD)" stroke="#000" stroke-width="3"/>
+  <text x="400" y="85" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle" filter="url(#shadowD)" letter-spacing="2">SRI SWATHI TIFFINS</text>
+  <text x="400" y="112" font-size="20" font-weight="900" fill="#ffd200" text-anchor="middle" letter-spacing="3">( 100% PURE VEG )</text>
+
+  <!-- Address, Phone & GST Header -->
+  <rect x="35" y="130" width="730" height="70" rx="6" fill="url(#subHeaderGradD)"/>
+  <text x="400" y="158" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="1">ST. NO. 8, HABSIGUDA, HYDERABAD</text>
+  <text x="400" y="186" font-size="18" font-weight="bold" fill="#ffd200" text-anchor="middle">GST: 36EKHPK9217G1ZX  |  PH: 07995008827</text>
+
+  <!-- Section Title Banner -->
+  <rect x="120" y="215" width="560" height="48" rx="24" fill="#006837" stroke="#000" stroke-width="2"/>
+  <text x="280" y="248" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">DOSA'S</text>
+  <text x="540" y="248" font-size="26" font-weight="900" fill="#ffd200" text-anchor="middle" letter-spacing="1">RATES</text>
+
+  <!-- Dosas List Items (Exact Original Prices from Image 4) -->
+  <g font-size="22" font-weight="900" fill="#00227b" font-family="'Arial Black', sans-serif">
+    <!-- Item 29: Plain Dosa 40/- -->
+    <text x="55" y="295">29. PLAIN DOSA</text>
+    <text x="360" y="295" fill="#444" font-weight="bold" letter-spacing="3">............................</text>
+    <text x="680" y="295" fill="#d61b1b" font-size="25">40/-</text>
+
+    <!-- Item 30: Masala Dosa 50/- -->
+    <text x="55" y="335">30. MASALA DOSA</text>
+    <text x="390" y="335" fill="#444" font-weight="bold" letter-spacing="3">.........................</text>
+    <text x="680" y="335" fill="#d61b1b" font-size="25">50/-</text>
+
+    <!-- Item 31: Onion Dosa 65/- -->
+    <text x="55" y="375">31. ONION DOSA</text>
+    <text x="375" y="375" fill="#444" font-weight="bold" letter-spacing="3">...........................</text>
+    <text x="680" y="375" fill="#d61b1b" font-size="25">65/-</text>
+
+    <!-- Item 32: Pesarattu 70/- -->
+    <text x="55" y="415">32. PESARATTU</text>
+    <text x="345" y="415" fill="#444" font-weight="bold" letter-spacing="3">..............................</text>
+    <text x="680" y="415" fill="#d61b1b" font-size="25">70/-</text>
+
+    <!-- Item 33: Uttappa 65/- -->
+    <text x="55" y="455">33. UTTAPPA</text>
+    <text x="315" y="455" fill="#444" font-weight="bold" letter-spacing="3">................................</text>
+    <text x="680" y="455" fill="#d61b1b" font-size="25">65/-</text>
+
+    <!-- Item 34: Rava Dosa 65/- -->
+    <text x="55" y="495">34. RAVA DOSA</text>
+    <text x="350" y="495" fill="#444" font-weight="bold" letter-spacing="3">.............................</text>
+    <text x="680" y="495" fill="#d61b1b" font-size="25">65/-</text>
+
+    <!-- Item 35: Set Dosa 65/- -->
+    <text x="55" y="535">35. SET DOSA</text>
+    <text x="315" y="535" fill="#444" font-weight="bold" letter-spacing="3">................................</text>
+    <text x="680" y="535" fill="#d61b1b" font-size="25">65/-</text>
+
+    <!-- Item 36: Onion Rava Dosa 70/- -->
+    <text x="55" y="575">36. ONION RAVA DOSA</text>
+    <text x="430" y="575" fill="#444" font-weight="bold" letter-spacing="3">...............</text>
+    <text x="680" y="575" fill="#d61b1b" font-size="25">70/-</text>
+
+    <!-- Item 37: Upma Pesarattu 75/- -->
+    <text x="55" y="615">37. UPMA PESARATTU</text>
+    <text x="430" y="615" fill="#444" font-weight="bold" letter-spacing="3">...............</text>
+    <text x="680" y="615" fill="#d61b1b" font-size="25">75/-</text>
+
+    <!-- Item 38: Upma Dosa 75/- -->
+    <text x="55" y="655">38. UPMA DOSA</text>
+    <text x="345" y="655" fill="#444" font-weight="bold" letter-spacing="3">..............................</text>
+    <text x="680" y="655" fill="#d61b1b" font-size="25">75/-</text>
+
+    <!-- Item 39: 70 MM Dosa 100/- -->
+    <rect x="45" y="675" width="710" height="42" fill="#ffedd5" rx="6"/>
+    <text x="55" y="705" fill="#d61b1b">39. 70 MM DOSA</text>
+    <text x="380" y="705" fill="#d61b1b" font-weight="bold" letter-spacing="3">.........................</text>
+    <text x="670" y="705" fill="#d61b1b" font-size="26">100/-</text>
+
+    <!-- Item 40: Paper Dosa 90/- -->
+    <text x="55" y="750">40. PAPER DOSA</text>
+    <text x="365" y="750" fill="#444" font-weight="bold" letter-spacing="3">............................</text>
+    <text x="680" y="750" fill="#d61b1b" font-size="25">90/-</text>
+
+    <!-- Item 41: Kakinada Pesarattu 80/- -->
+    <text x="55" y="790">41. KAKINADA PESARATTU</text>
+    <text x="490" y="790" fill="#444" font-weight="bold" letter-spacing="3">.......</text>
+    <text x="680" y="790" fill="#d61b1b" font-size="25">80/-</text>
+
+    <!-- Item 42: Ragi Rava Dosa 80/- -->
+    <text x="55" y="830">42. RAGI RAVA DOSA</text>
+    <text x="415" y="830" fill="#444" font-weight="bold" letter-spacing="3">................</text>
+    <text x="680" y="830" fill="#d61b1b" font-size="25">80/-</text>
+
+    <!-- Item 43: Steem Dosa 70/- -->
+    <text x="55" y="870">43. STEEM DOSA</text>
+    <text x="360" y="870" fill="#444" font-weight="bold" letter-spacing="3">............................</text>
+    <text x="680" y="870" fill="#d61b1b" font-size="25">70/-</text>
+
+    <!-- Item 44: Millet Dosa 85/- -->
+    <text x="55" y="910">44. MILLET DOSA</text>
+    <text x="370" y="910" fill="#444" font-weight="bold" letter-spacing="3">..........................</text>
+    <text x="680" y="910" fill="#d61b1b" font-size="25">85/-</text>
+
+    <!-- Highlights -->
+    <line x1="50" y1="950" x2="750" y2="950" stroke="#d61b1b" stroke-width="2" stroke-dasharray="8,4"/>
+    
+    <text x="55" y="990" fill="#b45309">• GHEE KARAM DOSA</text>
+    <text x="460" y="990" fill="#444" font-weight="bold" letter-spacing="3">............</text>
+    <text x="680" y="990" fill="#d61b1b" font-size="25">90/-</text>
+
+    <text x="55" y="1035" fill="#b45309">• BUTTER MASALA DOSA</text>
+    <text x="500" y="1035" fill="#444" font-weight="bold" letter-spacing="3">........</text>
+    <text x="680" y="1035" fill="#d61b1b" font-size="25">75/-</text>
+
+    <text x="55" y="1080" fill="#b45309">• PANEER MASALA DOSA</text>
+    <text x="510" y="1080" fill="#444" font-weight="bold" letter-spacing="3">.......</text>
+    <text x="680" y="1080" fill="#d61b1b" font-size="25">80/-</text>
+
+    <text x="55" y="1125" fill="#b45309">• PANEER BUTTER MASALA DOSA</text>
+    <text x="575" y="1125" fill="#444" font-weight="bold" letter-spacing="3">..</text>
+    <text x="680" y="1125" fill="#d61b1b" font-size="25">90/-</text>
+  </g>
+</svg>

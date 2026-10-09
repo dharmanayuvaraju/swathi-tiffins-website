@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" width="800" height="1200" style="background:#ffd200; font-family:'Arial Black', 'Helvetica Neue', sans-serif;">
+  <defs>
+    <filter id="shadowT" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <linearGradient id="headerGradT" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff0000"/>
+      <stop offset="100%" stop-color="#b30000"/>
+    </linearGradient>
+    <linearGradient id="subHeaderGradT" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00227b"/>
+      <stop offset="100%" stop-color="#001040"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Board Frame -->
+  <rect x="15" y="15" width="770" height="1170" rx="12" fill="#ffd200" stroke="#000" stroke-width="8"/>
+  <rect x="25" y="25" width="750" height="1150" fill="none" stroke="#d61b1b" stroke-width="3"/>
+
+  <!-- Main Restaurant Name Header -->
+  <rect x="35" y="35" width="730" height="85" rx="8" fill="url(#headerGradT)" stroke="#000" stroke-width="3"/>
+  <text x="400" y="85" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle" filter="url(#shadowT)" letter-spacing="2">SRI SWATHI TIFFINS</text>
+  <text x="400" y="112" font-size="20" font-weight="900" fill="#ffd200" text-anchor="middle" letter-spacing="3">( 100% PURE VEG )</text>
+
+  <!-- Address, Phone & GST Header -->
+  <rect x="35" y="130" width="730" height="70" rx="6" fill="url(#subHeaderGradT)"/>
+  <text x="400" y="158" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="1">ST. NO. 8, HABSIGUDA, HYDERABAD</text>
+  <text x="400" y="186" font-size="18" font-weight="bold" fill="#ffd200" text-anchor="middle">GST: 36EKHPK9217G1ZX  |  PH: 07995008827</text>
+
+  <!-- Section Title Banner -->
+  <rect x="120" y="215" width="560" height="48" rx="24" fill="#d61b1b" stroke="#000" stroke-width="2"/>
+  <text x="280" y="248" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">TIFFINS</text>
+  <text x="540" y="248" font-size="26" font-weight="900" fill="#ffd200" text-anchor="middle" letter-spacing="1">RATES</text>
+
+  <!-- Tiffins List Items (Exact Original Prices from Image 1) -->
+  <g font-size="23" font-weight="900" fill="#00227b" font-family="'Arial Black', sans-serif">
+    <!-- Item 1: Idly 30/- -->
+    <text x="55" y="295">1. IDLY</text>
+    <text x="280" y="295" fill="#444" font-weight="bold" letter-spacing="3">.....................................</text>
+    <text x="680" y="295" fill="#d61b1b" font-size="26">30/-</text>
+
+    <!-- Item 2: Sambar Idly 40/- -->
+    <text x="55" y="335">2. SAMBAR IDLY</text>
+    <text x="360" y="335" fill="#444" font-weight="bold" letter-spacing="3">...........................</text>
+    <text x="680" y="335" fill="#d61b1b" font-size="26">40/-</text>
+
+    <!-- Item 3: Single Idly 18/- -->
+    <text x="55" y="375">3. SINGLE IDLY</text>
+    <text x="340" y="375" fill="#444" font-weight="bold" letter-spacing="3">.............................</text>
+    <text x="680" y="375" fill="#d61b1b" font-size="26">18/-</text>
+
+    <!-- Item 4: Ghee Idly 50/- -->
+    <text x="55" y="415">4. GHEE IDLY</text>
+    <text x="310" y="415" fill="#444" font-weight="bold" letter-spacing="3">................................</text>
+    <text x="680" y="415" fill="#d61b1b" font-size="26">50/-</text>
+
+    <!-- Item 5: Guntur Idly 60/- -->
+    <text x="55" y="455">5. GUNTUR IDLY</text>
+    <text x="350" y="455" fill="#444" font-weight="bold" letter-spacing="3">...........................</text>
+    <text x="680" y="455" fill="#d61b1b" font-size="26">60/-</text>
+
+    <!-- Item 6: Tawa Idly 55/- -->
+    <text x="55" y="495">6. TAWA IDLY</text>
+    <text x="310" y="495" fill="#444" font-weight="bold" letter-spacing="3">................................</text>
+    <text x="680" y="495" fill="#d61b1b" font-size="26">55/-</text>
+
+    <!-- Item 7: Single Sambar Idly 25/- -->
+    <text x="55" y="535">7. SINGLE SAMBAR IDLY (1 Pcs)</text>
+    <text x="525" y="535" fill="#444" font-weight="bold" letter-spacing="3">....</text>
+    <text x="680" y="535" fill="#d61b1b" font-size="26">25/-</text>
+
+    <!-- Item 8: Tomato Upma 35/- -->
+    <text x="55" y="575">8. TOMATO UPMA</text>
+    <text x="375" y="575" fill="#444" font-weight="bold" letter-spacing="3">.........................</text>
+    <text x="680" y="575" fill="#d61b1b" font-size="26">35/-</text>
+
+    <!-- Item 9: Mysore Bajji 40/- -->
+    <text x="55" y="615">9. MYSORE BAJJI (4 Pcs)</text>
+    <text x="445" y="615" fill="#444" font-weight="bold" letter-spacing="3">............</text>
+    <text x="680" y="615" fill="#d61b1b" font-size="26">40/-</text>
+
+    <!-- Item 10: Mysore Bajji (2 Pcs) 25/- -->
+    <text x="55" y="655">10. MYSORE BAJJI (2 Pcs)</text>
+    <text x="455" y="655" fill="#444" font-weight="bold" letter-spacing="3">..........</text>
+    <text x="680" y="655" fill="#d61b1b" font-size="26">25/-</text>
+
+    <!-- Item 11: Tawa Bonda 55/- -->
+    <text x="55" y="695">11. TAWA BONDA</text>
+    <text x="355" y="695" fill="#444" font-weight="bold" letter-spacing="3">...........................</text>
+    <text x="680" y="695" fill="#d61b1b" font-size="26">55/-</text>
+
+    <!-- Item 12: Vada 50/- -->
+    <text x="55" y="735">12. VADA</text>
+    <text x="280" y="735" fill="#444" font-weight="bold" letter-spacing="3">.....................................</text>
+    <text x="680" y="735" fill="#d61b1b" font-size="26">50/-</text>
+
+    <!-- Item 13: Sambar Vada 60/- -->
+    <text x="55" y="775">13. SAMBAR VADA</text>
+    <text x="375" y="775" fill="#444" font-weight="bold" letter-spacing="3">.........................</text>
+    <text x="680" y="775" fill="#d61b1b" font-size="26">60/-</text>
+
+    <!-- Item 14: Single Vada 30/- -->
+    <text x="55" y="815">14. SINGLE VADA</text>
+    <text x="340" y="815" fill="#444" font-weight="bold" letter-spacing="3">.............................</text>
+    <text x="680" y="815" fill="#d61b1b" font-size="26">30/-</text>
+
+    <!-- Item 15: Single Sambar Vada 38/- -->
+    <text x="55" y="855">15. SINGLE SAMBAR VADA</text>
+    <text x="445" y="855" fill="#444" font-weight="bold" letter-spacing="3">............</text>
+    <text x="680" y="855" fill="#d61b1b" font-size="26">38/-</text>
+
+    <!-- Item 16: Tawa Vada 75/- -->
+    <text x="55" y="895">16. TAWA VADA</text>
+    <text x="335" y="895" fill="#444" font-weight="bold" letter-spacing="3">.............................</text>
+    <text x="680" y="895" fill="#d61b1b" font-size="26">75/-</text>
+
+    <!-- Item 17: 1 Idly & 1 Vada 40/- -->
+    <text x="55" y="935">17. 1 IDLY &amp; 1 VADA</text>
+    <text x="370" y="935" fill="#444" font-weight="bold" letter-spacing="3">.........................</text>
+    <text x="680" y="935" fill="#d61b1b" font-size="26">40/-</text>
+
+    <!-- Item 18: 1 Idly & 1 Vada Sambar 50/- -->
+    <text x="55" y="975">18. 1 IDLY &amp; 1 VADA SAMBAR</text>
+    <text x="480" y="975" fill="#444" font-weight="bold" letter-spacing="3">......</text>
+    <text x="680" y="975" fill="#d61b1b" font-size="26">50/-</text>
+
+    <!-- Item 19: 2 Idly & 1 Vada 60/- -->
+    <text x="55" y="1015">19. 2 IDLY &amp; 1 VADA</text>
+    <text x="370" y="1015" fill="#444" font-weight="bold" letter-spacing="3">.........................</text>
+    <text x="680" y="1015" fill="#d61b1b" font-size="26">60/-</text>
+
+    <!-- Item 20: 2 Idly & 1 Vada Sambar 70/- -->
+    <text x="55" y="1055">20. 2 IDLY &amp; 1 VADA SAMBAR</text>
+    <text x="480" y="1055" fill="#444" font-weight="bold" letter-spacing="3">......</text>
+    <text x="680" y="1055" fill="#d61b1b" font-size="26">70/-</text>
+
+    <!-- Item 21: Poori (3 Nos) 50/- -->
+    <text x="55" y="1095">21. POORI (3 Nos)</text>
+    <text x="345" y="1095" fill="#444" font-weight="bold" letter-spacing="3">............................</text>
+    <text x="680" y="1095" fill="#d61b1b" font-size="26">50/-</text>
+
+    <!-- Item 22: Poori (2 Pcs) / Parota -->
+    <text x="55" y="1135">22. POORI (2 Pcs) / PAROTA</text>
+    <text x="480" y="1135" fill="#444" font-weight="bold" letter-spacing="3">......</text>
+    <text x="680" y="1135" fill="#d61b1b" font-size="26">35/55</text>
+  </g>
+</svg>

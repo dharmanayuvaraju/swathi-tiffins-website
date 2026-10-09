@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1400" width="800" height="1400" style="background:#0a327d; font-family:'Arial Black', 'Helvetica Neue', sans-serif;">
+  <defs>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="blueBoardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#144bb8"/>
+      <stop offset="100%" stop-color="#09255e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Board Frame -->
+  <rect x="15" y="15" width="770" height="1370" rx="14" fill="url(#blueBoardGrad)" stroke="#ffd200" stroke-width="8"/>
+  <rect x="25" y="25" width="750" height="1350" fill="none" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- Main Restaurant Name Header -->
+  <text x="400" y="80" font-size="44" font-weight="900" fill="#ffffff" stroke="#ff0000" stroke-width="2" text-anchor="middle" filter="url(#shadow4)" letter-spacing="2">SREE SWATHI TIFFINS</text>
+  
+  <!-- Subheader -->
+  <rect x="150" y="105" width="500" height="50" rx="25" fill="#ffd200"/>
+  <text x="400" y="140" font-size="30" font-weight="900" fill="#d61b1b" text-anchor="middle" letter-spacing="4">TEA &amp; COFFEE</text>
+
+  <text x="400" y="180" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">ST. NO. 8, HABSIGUDA, HYDERABAD • PH: 07995008827</text>
+  <line x1="45" y1="195" x2="755" y2="195" stroke="#ffd200" stroke-width="3"/>
+
+  <!-- Beverage List Items -->
+  <g font-size="20" font-weight="900" fill="#ffffff" font-family="'Arial Black', sans-serif">
+    <text x="55" y="235">SINGLE TEA</text>
+    <text x="250" y="235" fill="#93c5fd" font-weight="bold" letter-spacing="3">-----------------------------</text>
+    <text x="660" y="235" fill="#ffd200" font-size="22">10-00</text>
+
+    <text x="55" y="270">SINGLE BLACK TEA</text>
+    <text x="350" y="270" fill="#93c5fd" font-weight="bold" letter-spacing="3">--------------------</text>
+    <text x="660" y="270" fill="#ffd200" font-size="22">10-00</text>
+
+    <text x="55" y="305">SINGLE ALLAM TEA</text>
+    <text x="350" y="305" fill="#93c5fd" font-weight="bold" letter-spacing="3">--------------------</text>
+    <text x="660" y="305" fill="#ffd200" font-size="22">12-00</text>
+
+    <text x="55" y="340">PARCEL TEA</text>
+    <text x="250" y="340" fill="#93c5fd" font-weight="bold" letter-spacing="3">-----------------------------</text>
+    <text x="660" y="340" fill="#ffd200" font-size="22">16-00</text>
+
+    <text x="55" y="375">GINGER TEA</text>
+    <text x="250" y="375" fill="#93c5fd" font-weight="bold" letter-spacing="3">-----------------------------</text>
+    <text x="660" y="375" fill="#ffd200" font-size="22">16-00</text>
+
+    <text x="55" y="410">LEMON TEA</text>
+    <text x="250" y="410" fill="#93c5fd" font-weight="bold" letter-spacing="3">-----------------------------</text>
+    <text x="660" y="410" fill="#ffd200" font-size="22">16-00</text>
+
+    <text x="55" y="445">TAJMAHAL BLACK TEA</text>
+    <text x="380" y="445" fill="#93c5fd" font-weight="bold" letter-spacing="3">----------------</text>
+    <text x="660" y="445" fill="#ffd200" font-size="22">16-00</text>
+
+    <text x="55" y="480">PARCEL GINGER TEA</text>
+    <text x="360" y="480" fill="#93c5fd" font-weight="bold" letter-spacing="3">------------------</text>
+    <text x="660" y="480" fill="#ffd200" font-size="22">18-00</text>
+
+    <text x="55" y="515">FULL TEA</text>
+    <text x="210" y="515" fill="#93c5fd" font-weight="bold" letter-spacing="3">---------------------------------</text>
+    <text x="660" y="515" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="550">SONTI TEA</text>
+    <text x="240" y="550" fill="#93c5fd" font-weight="bold" letter-spacing="3">------------------------------</text>
+    <text x="660" y="550" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="585">PEPPER TEA</text>
+    <text x="250" y="585" fill="#93c5fd" font-weight="bold" letter-spacing="3">-----------------------------</text>
+    <text x="660" y="585" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="620">ILACHI TEA</text>
+    <text x="240" y="620" fill="#93c5fd" font-weight="bold" letter-spacing="3">------------------------------</text>
+    <text x="660" y="620" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="655">MASALA TEA</text>
+    <text x="260" y="655" fill="#93c5fd" font-weight="bold" letter-spacing="3">----------------------------</text>
+    <text x="660" y="655" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="690">GREEN TEA</text>
+    <text x="240" y="690" fill="#93c5fd" font-weight="bold" letter-spacing="3">------------------------------</text>
+    <text x="660" y="690" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="725">BADAM TEA</text>
+    <text x="240" y="725" fill="#93c5fd" font-weight="bold" letter-spacing="3">------------------------------</text>
+    <text x="660" y="725" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="760" fill="#ffd200">HOT BADAM MILK</text>
+    <text x="330" y="760" fill="#93c5fd" font-weight="bold" letter-spacing="3">---------------------</text>
+    <text x="660" y="760" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="795">HOT MILK</text>
+    <text x="220" y="795" fill="#93c5fd" font-weight="bold" letter-spacing="3">--------------------------------</text>
+    <text x="660" y="795" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="830">BADAM COFFEE</text>
+    <text x="290" y="830" fill="#93c5fd" font-weight="bold" letter-spacing="3">-------------------------</text>
+    <text x="660" y="830" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="865">BLACK COFFEE</text>
+    <text x="290" y="865" fill="#93c5fd" font-weight="bold" letter-spacing="3">-------------------------</text>
+    <text x="660" y="865" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="900" fill="#ffd200">FILTER COFFEE</text>
+    <text x="290" y="900" fill="#93c5fd" font-weight="bold" letter-spacing="3">-------------------------</text>
+    <text x="660" y="900" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="935">SONTI COFFEE</text>
+    <text x="280" y="935" fill="#93c5fd" font-weight="bold" letter-spacing="3">--------------------------</text>
+    <text x="660" y="935" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="970">BRU COFFEE</text>
+    <text x="250" y="970" fill="#93c5fd" font-weight="bold" letter-spacing="3">-----------------------------</text>
+    <text x="660" y="970" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="1005">NESCAFE COFFEE</text>
+    <text x="320" y="1005" fill="#93c5fd" font-weight="bold" letter-spacing="3">----------------------</text>
+    <text x="660" y="1005" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="1040">BOOST</text>
+    <text x="180" y="1040" fill="#93c5fd" font-weight="bold" letter-spacing="3">------------------------------------</text>
+    <text x="660" y="1040" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="1075">HORLICKS</text>
+    <text x="220" y="1075" fill="#93c5fd" font-weight="bold" letter-spacing="3">--------------------------------</text>
+    <text x="660" y="1075" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="1110">BOURNVITA</text>
+    <text x="240" y="1110" fill="#93c5fd" font-weight="bold" letter-spacing="3">------------------------------</text>
+    <text x="660" y="1110" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="1145">PISTA BADAM DRINK MIX</text>
+    <text x="440" y="1145" fill="#93c5fd" font-weight="bold" letter-spacing="3">------------</text>
+    <text x="660" y="1145" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="1180">RAGI MALT DRINK MIX</text>
+    <text x="400" y="1180" fill="#93c5fd" font-weight="bold" letter-spacing="3">----------------</text>
+    <text x="660" y="1180" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="1215">ROSE MILK DRINK MIX</text>
+    <text x="400" y="1215" fill="#93c5fd" font-weight="bold" letter-spacing="3">----------------</text>
+    <text x="660" y="1215" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="1250">PANKAJA KASTHURI</text>
+    <text x="350" y="1250" fill="#93c5fd" font-weight="bold" letter-spacing="3">---------------------</text>
+    <text x="660" y="1250" fill="#ffd200" font-size="22">20-00</text>
+
+    <text x="55" y="1285">TOMATO SOUP</text>
+    <text x="280" y="1285" fill="#93c5fd" font-weight="bold" letter-spacing="3">--------------------------</text>
+    <text x="660" y="1285" fill="#ffd200" font-size="22">20-00</text>
+
+    <rect x="45" y="1305" width="710" height="40" fill="#ffd200" rx="6"/>
+    <text x="55" y="1332" fill="#d61b1b">OSMANIA BISCUIT</text>
+    <text x="320" y="1332" fill="#d61b1b" font-weight="bold" letter-spacing="3">----------------------</text>
+    <text x="660" y="1332" fill="#d61b1b" font-size="24">3-00</text>
+  </g>
+
+  <!-- Note at bottom -->
+  <text x="400" y="1375" font-size="18" font-weight="bold" fill="#ffd200" text-anchor="middle" letter-spacing="2">NOTE : OSMANIA BISCUIT PACKETS AVAILABLE</text>
+</svg>
